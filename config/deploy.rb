@@ -18,7 +18,7 @@ set :user,  conf[:deploy_user]
 set :deploy_to, "/home/#{conf[:deploy_user]}/apps/#{application}"
 set :run_list,  "#{deploy_to}/run_list.json"
 # set :deploy_via, :remote_cache
-# set :use_sudo, false
+set :use_sudo, false
 
 set :scm, "git"
 set :repository, "git@github.com:#{conf[:github_user]}/#{conf[:app_name]}.git"
